@@ -52,7 +52,7 @@ a.button {
 .nav-item {
   display: inline-block;
   padding: 15px 20px;
-  height: 40px;
+  height: 70px;
   line-height: 40px;
   color:#fff;
   text-decoration:none;
@@ -109,6 +109,7 @@ a.button {
   max-width: 600px;
   position: relative;
   margin: auto;
+  z-index: -10;
 
 }
 .mySlides {
