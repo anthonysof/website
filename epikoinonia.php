@@ -37,7 +37,7 @@
       </li>
     </ul>
 </nav>
-<table class="bordepik" >
+<table class="bordepik" style="margin-top: 10px;" >
 <form>
 <tr> <th colspan="2" > ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ </th> </tr>
 <tr> <td> <label for="fsname"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ*  </label> </td>

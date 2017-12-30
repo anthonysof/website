@@ -151,4 +151,4 @@ a.button {
   from {opacity: .4}
   to {opacity: 1}
 }
-.bordepik{text-align: center; border: 1px solid black;}
+.bordepik{text-align: center; border: 1px solid black; margin: auto; padding: 10px;}
