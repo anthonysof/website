@@ -38,11 +38,11 @@
     </ul>
 </nav>
 <h1> ΠΟΥ ΘΑ ΜΑΣ ΒΡΕΙΤΕ</h1>
-<p> ΔΙΕΥΘΗΝΣΗ : Αργοναυτων 59, Μαρουσι <br> Τηλεφωνο Επικοινωνιας : 2108024522<p>
+<p> ΔΙΕΥΘΥΝΣΗ : Αργοναυτων 59, Μαρουσι <br> Τηλεφωνο Επικοινωνιας : 2108024522<p>
 <br>
-<div id="map" style="width:600px;height:400px">My map will go here</div>
-<br><br><br><br><br><br><br><br><br><br>
-<table style="text-align: center; border: 1px solid black;">
+<div id="map" style="width:600px;height:400px; margin: auto; margin-bottom: 20px;">My map will go here</div>
+
+<table style="text-align: center; border: 1px solid black; margin: auto; padding: 5px;">
 <tr > <td>ΔΕΥΤΕΡΑ </td> <td>9:00-17:00 </td> </tr>
 <tr > <td>ΤΡΙΤΗ</td> <td>9:00-17:00  </td> </tr>
 <tr> <td>ΤΕΤΑΡΤΗ </td> <td>9:00-17:00  </td> </tr>
@@ -63,3 +63,5 @@ marker.setMap(map);
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXOIB2USUYp8jbyNlvbiD3pNT1Atr_Cyg&callback=myMap"></script>
+</body>
+</html>
