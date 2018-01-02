@@ -117,15 +117,16 @@ a.button {
 }
 
 .text {
-  color: gray;
+  color: white;
   font:1em "Raleway", sans-serif;
   font-size: 15px;
   font-weight: bold;
   padding: 8px 12px;
   position: absolute;
-  bottom: 8px;
+  bottom: 0px;
   width: 100%;
   text-align: center;
+  background-color: black;
 }
 .numbertext {
   color: #f2f2f2;
