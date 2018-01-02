@@ -39,6 +39,7 @@ include('session.php'); ?>
           </div>
       </li>
     </ul>
+    <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <div class="content">
 TRALALO <?php echo "<br>".$login_session." ".$row['firstname']." ".$row['surname']." ".$row['email']; ?>

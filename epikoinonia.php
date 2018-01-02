@@ -39,6 +39,7 @@ session_start(); ?>
           </div>
       </li>
     </ul>
+    <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <table class="bordepik" style="margin-top: 10px;" >
 <form>

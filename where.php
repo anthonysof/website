@@ -39,6 +39,7 @@ session_start(); ?>
           </div>
       </li>
     </ul>
+    <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <h1> ΠΟΥ ΘΑ ΜΑΣ ΒΡΕΙΤΕ</h1>
 <p> ΔΙΕΥΘΥΝΣΗ : Αργοναυτων 59, Μαρουσι <br> Τηλεφωνο Επικοινωνιας : 2108024522<p>
