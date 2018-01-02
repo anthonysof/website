@@ -12,13 +12,13 @@ include('session.php'); ?>
 </head>
 <body>
   <nav class="nav-main">
-    <div class="logo"><a href="main.html">Maria's Travels</a></div>
+    <div class="logo"><a href="http://localhost/maria/main.php">Maria's Travels</a></div>
     <ul>
       <li>
           <a href="epikoinonia.html" class="nav-item">Επικοινωνήστε μαζί μας</a>
       </li>
       <li>
-          <a href="where.html" class="nav-item">Πού είμαστε;</a>
+          <a href="http://localhost/maria/main.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <li>
           <a href="kratisi.html" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
