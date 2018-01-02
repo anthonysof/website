@@ -61,12 +61,12 @@ session_start(); ?>
 document.getElementById("pin1").innerHTML = localStorage.getItem("onoma");
 document.getElementById("pin2").innerHTML = localStorage.getItem("thl");
 document.getElementById("pin3").innerHTML = localStorage.getItem("email");
-document.getElementById("pin4").innerHTML = localStorage.getItem("quest");
+document.getElementById("pin4").innerHTML = decodeURIComponent(localStorage.getItem("quest")); //decode encoded special chars
 
 function mailme() {
   var email = 'sample@gmail.com';
           var subject = 'Ερώτηση';
-          var emailBody = 'Όνομα: '+localStorage.getItem("onoma")+'\n Τηλέφωνο: '+localStorage.getItem("thl")+' e-mail επικοινωνίας: '+localStorage.getItem("email")+' Ερώτηση: '+localStorage.getItem("quest");
+          var emailBody = 'Όνομα: '+localStorage.getItem("onoma")+'\n Τηλέφωνο: '+localStorage.getItem("thl")+' e-mail επικοινωνίας: '+localStorage.getItem("email")+' Ερώτηση: '+decodeURIComponent(localStorage.getItem("quest"));
           var attach = 'path';
           document.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody;
 }

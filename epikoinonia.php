@@ -57,23 +57,36 @@ session_start(); ?>
 <input type="reset" value="ΔΙΑΓΡΑΦΗ ΟΛΩΝ">
 <input id="btn" type="button" value="ΑΠΟΣΤΟΛΗ" onclick="validateForm()">
 </form>
+</body>
 <script>
 var onom, emal, que, thlef;
+
+function validateField(data,regex) {
+    return regex.test(data);
+}
 
 function validateForm() {
 	onom=document.getElementById('fsname').value;
 	emal=document.getElementById('mail').value;
-	que=document.getElementById('q').value;
+	que=encodeURIComponent(document.getElementById('q').value); //encode special chars no XSS
 	thlef=document.getElementById('thl').value;
-    if ( onom=="" || emal=="" ||  que=="")
-		{alert("ΔΕΝ ΤΑ ΣΥΜΠΛΗΡΩΣΕΣ ΟΛΑ");}
+    if ( onom=="" || emal=="" ||  que==""){
+      alert("ΔΕΝ ΤΑ ΣΥΜΠΛΗΡΩΣΕΣ ΟΛΑ");
+    }
 		else
 		{
+      if (validateField(emal,/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
+        if (validateField(onom,/^[A-Za-zα-ωΑ-Ω]*$/)){
+          if (validateField(thlef,/^\d{10}$/)){
 		localStorage.setItem("onoma", onom);
 		localStorage.setItem("email", emal);
 		localStorage.setItem("quest", que);
 		localStorage.setItem("thl", thlef);
 		window.open("https://localhost/maria/epivmhn.php");
-	}
+	        }else{alert("Μη έγκυρο τηλέφωνο");}
+        }else{alert("Μη έγκυρο ονοματεπώνυμο");}
+      }else{alert("Μη έγκυρο email");}
+    }
 }
 </script>
+</html>
