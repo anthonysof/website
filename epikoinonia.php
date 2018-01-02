@@ -24,13 +24,6 @@ session_start(); ?>
           <a href="kratisi.html" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
       </li>
       <li>
-        <?php if(!isset($_SESSION['login_user'])){echo '<a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
-          else{echo '<a href="https://localhost/maria/logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
-      </li>
-      <?php if(isset($_SESSION['login_user'])){
-        echo '<li><a href="https://localhost/maria/search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
-        ?>
-      <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
           <div class="nav-content">
             <div class="nav-sub">
@@ -41,6 +34,14 @@ session_start(); ?>
             </div>
           </div>
       </li>
+      <li>
+        <?php if(!isset($_SESSION['login_user'])){echo '<a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
+          else{echo '<a href="https://localhost/maria/logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
+      </li>
+      <?php if(isset($_SESSION['login_user'])){
+        echo '<li><a href="https://localhost/maria/search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
+        ?>
+
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>

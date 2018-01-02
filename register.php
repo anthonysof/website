@@ -21,9 +21,6 @@
           <a href="kratisi.html" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
       </li>
       <li>
-          <a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a> <!-- "#" allazeis me file, menei=dropdown -->
-      </li>
-      <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
           <div class="nav-content">
             <div class="nav-sub">
@@ -33,6 +30,9 @@
               </ul>
             </div>
           </div>
+      </li>
+      <li>
+          <a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a> <!-- "#" allazeis me file, menei=dropdown -->
       </li>
     </ul>
 </nav>
