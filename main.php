@@ -74,7 +74,7 @@ session_start(); ?>
 
 <!-- The dots/circles -->
 <div class="content">
-  EDW PERIEXOMENO SELIDAS NENE TI KALA KALA hfkdhfshfksdfjdsfdjskfnds
+  EDW PERIEXOMENO SELIDAS NENE TI KALA KALA
   <P> PARAGRAFOS </P>
 </div>
 <script>
