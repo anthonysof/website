@@ -64,7 +64,6 @@
 </div>
 <script>
 function validateField(data,regex) {
-  alert('etreksa');
     return regex.test(data);
 }
 
