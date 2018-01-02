@@ -59,7 +59,9 @@
   <td><b>Επιβεβαίωση Κωδικού*:</b></td>
   <td><input id="confpass" name="confpass" type="password" maxlength="120" required></td>
   </tr><tr>
-  <td><input type="submit" name="submit" value="Εγγραφή" onclick="valForm()"></td><td><input type="reset" name="reset" value="Καθαρισμός"></td></tr>
+  <td><input type="reset" name="reset" value="Καθαρισμός"></td>
+  <td><input type="submit" name="submit" value="Εγγραφή" onclick="valForm()"></td></tr>
+
 </table><input type="hidden" name="con" id="con" value="0"></form>
 </div>
 <script>
