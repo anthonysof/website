@@ -16,7 +16,7 @@ header("location: search.php");
 ?>
 <body>
   <nav class="nav-main">
-    <div class="logo"><a href="main.html">Maria's Travels</a></div>
+    <div class="logo"><a href="http://localhost/maria/main.php">Maria's Travels</a></div>
     <ul>
       <li>
           <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>

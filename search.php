@@ -12,7 +12,7 @@ include('session.php'); ?>
 </head>
 <body>
   <nav class="nav-main">
-    <div class="logo"><a href="main.html">Maria's Travels</a></div>
+    <div class="logo"><a href="http://localhost/maria/main.php">Maria's Travels</a></div>
     <ul>
       <li>
           <a href="epikoinonia.html" class="nav-item">Επικοινωνήστε μαζί μας</a>
