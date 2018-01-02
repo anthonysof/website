@@ -6,7 +6,7 @@
 -- Generation Time: Jan 02, 2018 at 11:20 PM
 -- Server version: 10.1.28-MariaDB
 -- PHP Version: 7.1.11
-
+CREATE DATABASE IF NOT EXISTS `userdb`
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
