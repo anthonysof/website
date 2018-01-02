@@ -18,7 +18,7 @@
           <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <li>
-          <a href="kratisi.html" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
+          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
       </li>
       <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
