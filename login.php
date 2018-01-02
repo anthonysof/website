@@ -57,33 +57,4 @@ header("location: search.php");
 
 </div>
 </body>
-<?php /*
-session_start();
-if(isset($_POST['username'])&&isset($_POST['password'])){
-  $passwordu = $_POST['password'];
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "userdb";
-  $user = $_POST['username'];
-  $conn = mysqli_connect($servername,$username,$password,$dbname);
-  if(!$conn) {
-    die("Connection failed: ".mysqli_connect_error());
-  }
-  mysqli_set_charset($conn,"utf8");
-  $query = "SELECT * FROM users WHERE username='$user'";
-  $result = mysqli_query($conn, $query);
-while($row=mysqli_fetch_assoc($result)){
-  if(password_verify($passwordu, $row['password'])){
-    $_SESSION['username'] = $user;
-    header("location: search.php");
-    }
-  else{
-    echo "Λάθος στοιχεία"."<br>";
-  }
-}
-mysqli_close($conn);
-  }
-
- */?>
 </html>
