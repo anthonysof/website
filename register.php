@@ -9,19 +9,19 @@
 </head>
 <body>
   <nav class="nav-main">
-    <div class="logo"><a href="http://localhost/maria/main.php">Maria's Travels</a></div>
+    <div class="logo"><a href="http://localhost:8012/maria/main.php">Maria's Travels</a></div>
     <ul>
       <li>
-          <a href="epikoinonia.html" class="nav-item">Επικοινωνήστε μαζί μας</a>
+          <a href="https://localhost:8012/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
       </li>
       <li>
-          <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
+          <a href="https://localhost:8012/maria/where.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <li>
           <a href="kratisi.html" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
       </li>
       <li>
-          <a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a> <!-- "#" allazeis me file, menei=dropdown -->
+          <a href="https://localhost:8012/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a> <!-- "#" allazeis me file, menei=dropdown -->
       </li>
       <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
