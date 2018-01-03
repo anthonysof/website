@@ -71,7 +71,7 @@ if(mysqli_num_rows($result) > 0){
           "<td>".$row['anaxorisi']."</td>".
           "<td>".$row['epistrofi']."</td>".
           "<td>".$row['tickets']."</td>".
-          "<td>".$row['cost']."€</td></tr>";
+          "<td>".$row['cost']."</td></tr>";
         }
         echo "</table>";
   } else {
