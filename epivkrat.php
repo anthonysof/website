@@ -68,8 +68,7 @@ session_start(); ?>
 </div>
   <script>
   var dest=localStorage.getItem("des");
- alert("dest");
-  if (dest=="100")
+   if (dest=="100")
   {
     document.getElementById("pin1").value = "Ικαρία";
   }
@@ -87,7 +86,8 @@ session_start(); ?>
   document.getElementById("pin5").value = localStorage.getItem("xreosi");
   document.getElementById("pin5").readOnly = true;
   function bye(){
-    window.close();
+    if(confirm("Κλείσιμο παραθύρου;")){
+    window.close(); }
   }
 </script>
 </body>

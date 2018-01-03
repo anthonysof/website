@@ -52,7 +52,7 @@ session_start(); ?>
   <option value="1500">New York</option>
 </select></td> </tr>
 <tr> <td > <label for="af">Αναχώρηση </label> </td> <td > <label for="anax">Επιστροφή </label> </td> </tr>
-<tr><td> <input type="date" name="af" id="af" required ></td> <td> <input type="date" id="anax" name="anax" required  > </tr>
+<tr><td> <input type="date" name="af" id="af" required  min="<?php echo date('Y-m-d');?>"></td> <td> <input type="date" id="anax" name="anax" required  > </tr>
 <tr> <td colspan="3"> <label for="tic">Εισητηρια </td> </tr>
 <tr > <td colspan="3"> <input type="text" id="tic" name="tic" maxlength="2" size="2"></td> </tr>
 <tr> <td colspan="3" > <input  id="btn" type="submit" value="ΑΝΑΖΗΤΗΣΗ" onclick="validateForm()"> </td> </tr>
@@ -69,8 +69,6 @@ function validateForm() {
   anax= document.getElementById("anax").valueAsDate;
 	tic=document.getElementById("tic").value;
   des=document.getElementById("des").value;
-  alert(tic);
-
   if (tic=="" || !(validateField(tic,/^[0-9]+$/)) || tic=="0")
   { p=1;
     alert("Συμπληρωστε αριθμο εισητηριων");}
