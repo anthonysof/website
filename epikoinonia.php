@@ -49,11 +49,13 @@ session_start(); ?>
 <form>
 <tr> <th colspan="2" > ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ </th> </tr>
 <tr> <td> <label for="fsname"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ*  </label> </td>
-<td> <input type="text" id="fsname" name="firstname" required ><br></td> </tr>
+<td> <?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="fsname" name="firstname" value="'.$_SESSION['user_name'].'"required>';}
+else{echo '<input type="text" id="fsane" name="firstname" required';} ?><br></td> </tr>
 <tr> <td> <label for="thl"> ΤΗΛΕΦΩΝΟ</label> </td>
 <td> <input type="text" id="thl"  name="zip" ><br > </td> </tr>
 <tr> <td> <label for="mail" >EMAIL* </label> </td>
-<td><input type="email"id="mail" name="email" required ><br ></td> </tr>
+<td><?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="mail" name="mail" value="'.$_SESSION['user_mail'].'"required>';}
+else{echo '<input type="email" id="mail" name="mail" required';} ?><br ></td> </tr>
 <tr> <td> <label for="q"> ΕΡΩΤΗΜΑ* </label></td>
 <td><textarea  rows="10" και cols="30" id="q" name="quest" required> </textarea><br></td> </tr>
 </table>
@@ -80,7 +82,7 @@ function validateForm() {
 		else
 		{
       if (validateField(emal,/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
-        if (validateField(onom,/^[A-Za-zα-ωΑ-Ω]*$/)){
+        if (validateField(onom,/^[A-Za-zα-ωΑ-Ω\s]*$/)){
           if (validateField(thlef,/^\d{10}$/)){
 		localStorage.setItem("onoma", onom);
 		localStorage.setItem("email", emal);

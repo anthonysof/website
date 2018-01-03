@@ -63,7 +63,7 @@ session_start(); ?>
     else{ echo '<input type="email" id="pin6" name="email"></td></tr>';} ?>
   </table>
   <input type="reset" value="ΑΚΥΡΩΣΗ" onclick="bye()" style="margin-top:20px;">
-  <input type="button" value="ΑΠΟΣΤΟΛΗ" onclick="" style="margin-top:20px;">
+  <input type="submit" name="submit" value="ΑΠΟΣΤΟΛΗ" style="margin-top:20px;">
   </form>
 </div>
   <script>
@@ -90,5 +90,27 @@ session_start(); ?>
     window.close(); }
   }
 </script>
+<?php
+if(isset($_POST['submit'])&&isset($_POST['email'])){
+  $servername = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "userdb";
+  $conn = mysqli_connect($servername,$username,$password,$dbname);
+  if(!$conn) {
+    die("Connection failed: ".mysqli_connect_error());
+  }
+  mysqli_set_charset($conn,"utf8");
+  $sql = "INSERT INTO kratiseis (ekdromi, anaxorisi, epistrofi, tickets, email,cost)
+  VALUES ('".$_POST['dest']."','".$_POST['anax']."','".$_POST['epis']."','".$_POST['tickets']."','".$_POST['email']."','".$_POST['xreosi']."')";
+  if (mysqli_query($conn, $sql)) {
+      echo "Έγινε εγγραφή στην βάση";
+  } else {
+      echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+  }
+mysqli_close($conn);
+}
+
+ ?>
 </body>
 </html>

@@ -25,6 +25,9 @@ $row=mysqli_fetch_assoc($query);
 if ($rows == 1 && password_verify($password,$row['password'])) {
 $_SESSION['login_user']=$username;
 $_SESSION['user_mail']=$row['email'];
+$_SESSION['user_name']=$row['firstname'];
+$_SESSION['user_name'].=" ";
+$_SESSION['user_name'].=$row['surname'];
 header("location: search.php");
 } else {
 $error = "Λανθασμένος κωδικός ή όνομα χρήστη.";

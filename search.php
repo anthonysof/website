@@ -45,9 +45,39 @@ include('session.php'); ?>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <div class="content">
-TRALALO <?php echo "<br>".$login_session." ".$row['firstname']." ".$row['surname']." ".$row['email']; ?>
-<b id="logout"><a href="logout.php">Log Out</a></b>
-  <P> PARAGRAFOS </P>
+<p>Κλεισμένες εκδρομές του χρήστη <?php echo $login_session; ?>:</p>
+
+<div><a href="logout.php">Log Out</a></div>
 </div>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "userdb";
+$conn = mysqli_connect($servername,$username,$password,$dbname);
+if(!$conn) {
+  die("Connection failed: ".mysqli_connect_error());
+}
+mysqli_set_charset($conn,"utf8");
+$sql = "SELECT * FROM kratiseis WHERE email='".$email_session."'";
+$result = mysqli_query($conn, $sql);
+if(mysqli_num_rows($result) > 0){
+    echo "<table style='border:1px solid black; margin:auto;'>";
+    echo
+    "<tr><th>email:</th><th>Προορισμός:</th><th>Αναχώρηση</th><th>Επιστροφή</th><th>Εισητήρια</th><th>Χρέωση</th></tr>";
+    while($row=mysqli_fetch_assoc($result)){
+      echo"<tr><td>".$row['email']."</td>".
+          "<td>".$row['ekdromi']."</td>".
+          "<td>".$row['anaxorisi']."</td>".
+          "<td>".$row['epistrofi']."</td>".
+          "<td>".$row['tickets']."</td>".
+          "<td>".$row['cost']."€</td></tr>";
+        }
+        echo "</table>";
+  } else {
+    echo "0 κρατήσεις βρέθηκαν";
+  }
+  mysqli_close($conn);
+ ?>
 </body>
 </html>
