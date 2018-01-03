@@ -12,7 +12,7 @@ $username=$_POST['username'];
 $password=$_POST['password'];
 
 $conn = mysqli_connect("localhost", "root", "","userdb");
-
+mysqli_set_charset($conn,"utf8");
 $username = stripslashes($username);    //security
 $password = stripslashes($password);
 $username = mysqli_real_escape_string($conn,$username);    //more security
