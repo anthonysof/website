@@ -83,7 +83,9 @@ session_start(); ?>
   document.getElementById("pin3").readOnly = true;
   document.getElementById("pin4").value = localStorage.getItem("tic");
   document.getElementById("pin4").readOnly = true;
-  document.getElementById("pin5").value = localStorage.getItem("xreosi");
+  var cost = localStorage.getItem("xreosi");
+  cost += "€";
+  document.getElementById("pin5").value = cost;
   document.getElementById("pin5").readOnly = true;
   function bye(){
     if(confirm("Κλείσιμο παραθύρου;")){
