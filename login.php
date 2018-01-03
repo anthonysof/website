@@ -49,7 +49,7 @@ header("location: search.php");
     <tr><th colspan="2">Είσοδος Χρήστη</th></tr>
     <tr><td>Username: </td><td><input type="text" id="username" name="username"></td></tr>
     <tr><td>Password: </td><td><input type="password" id="password" name="password"></td></tr>
-    <td><a href="http://localhost/maria/register.php" class="button">Εγγραφή</a></td>
+    <td><a href="https://localhost/maria/register.php" class="button">Εγγραφή</a></td>
     <td><input type="submit" id="submit" name="submit" value="Είσοδος"></td></tr></form>
 
   </table>
