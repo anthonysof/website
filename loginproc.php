@@ -24,6 +24,7 @@ $rows = mysqli_num_rows($query);
 $row=mysqli_fetch_assoc($query);
 if ($rows == 1 && password_verify($password,$row['password'])) {
 $_SESSION['login_user']=$username;
+$_SESSION['user_mail']=$row['email'];
 header("location: search.php");
 } else {
 $error = "Λανθασμένος κωδικός ή όνομα χρήστη.";

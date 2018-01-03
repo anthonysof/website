@@ -21,7 +21,7 @@ session_start(); ?>
           <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <li>
-          <a href="kratisi.html" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
+          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
       </li>
       <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
@@ -51,7 +51,7 @@ session_start(); ?>
   <option value="100">Ikaria</option>
   <option value="1500">New York</option>
 </select></td> </tr>
-<tr> <td > <label for="af">Άφιξη </label> </td> <td > <label for="anax">Αναχώρηση </label> </td> </tr>
+<tr> <td > <label for="af">Αναχώρηση </label> </td> <td > <label for="anax">Επιστροφή </label> </td> </tr>
 <tr><td> <input type="date" name="af" id="af" required ></td> <td> <input type="date" id="anax" name="anax" required  > </tr>
 <tr> <td colspan="3"> <label for="tic">Εισητηρια </td> </tr>
 <tr > <td colspan="3"> <input type="text" id="tic" name="tic" maxlength="2" size="2"></td> </tr>

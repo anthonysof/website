@@ -45,35 +45,50 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
+<div class="content">
 <form method="post">
-<table>
+<table style="margin:auto;">
   <tr> <td>  ΠΡΟΟΡΙΣΜΟΣ </td>
-  <td> <input type="text" id="pin1" name="dest" readonly> </td> </tr>
-  <tr> <td> ΑΦΙΞΗ </td>
-  <td id="pin2"> </td> </tr>
-  <tr> <td> ΑΝΑΧΩΡΗΣΗ  </td>
-  <td id="pin3"> </td> </tr>
+  <td> <input type="text" id="pin1" name="dest" value="" style="text-align:center;"> </td> </tr>
+  <tr> <td> ΑΝΑΧΩΡΗΣΗ </td>
+  <td> <input type="text" id="pin2" name="anax" value="" style="text-align:center;"> </td> </tr>
+  <tr> <td> ΕΠΙΣΤΡΟΦΗ  </td>
+  <td> <input type="text" id="pin3" name="epis" value="" style="text-align:center;"> </td> </tr>
   <tr> <td>  ΕΙΣΗΤΗΡΙΑ </td>
-  <td id="pin4"> </td> </tr>
+  <td> <input type="text" id="pin4" name="tickets" value="" style="text-align:center;"> </td> </tr>
   <tr> <td>  ΧΡΕΩΣΗ </td>
-  <td id="pin4"> </td> </tr>
+  <td> <input type="text" id="pin5" name="xreosi" value="" style="text-align:center;"> </td> </tr>
+  <tr> <td>  E-MAIL </td>
+  <td> <?php if(isset($_SESSION['login_user'])){echo '<input type="text" id="pin6" name="email" value="'.$_SESSION['user_mail'].'" style="text-align:center;" readOnly> </td> </tr>';}
+    else{ echo '<input type="email" id="pin6" name="email"></td></tr>';} ?>
   </table>
-  <input type="reset" value="ΑΚΥΡΩΣΗ" onclick="bye()">
-  <input type="button" value="ΑΠΟΣΤΟΛΗ" onclick="">
+  <input type="reset" value="ΑΚΥΡΩΣΗ" onclick="bye()" style="margin-top:20px;">
+  <input type="button" value="ΑΠΟΣΤΟΛΗ" onclick="" style="margin-top:20px;">
   </form>
+</div>
   <script>
   var dest=localStorage.getItem("des");
+ alert("dest");
   if (dest=="100")
   {
-    document.getElementById("pin1").value = "Ikaria";
+    document.getElementById("pin1").value = "Ικαρία";
   }
   else {
     document.getElementById("pin1").value = "New York";
   }
+  document.getElementById("pin1").readOnly = true;
 
-  document.getElementById("pin2").value = localStorage.getItem("des");
-  document.getElementById("pin3").value = localStorage.getItem("des");
-  document.getElementById("pin4").value = localStorage.getItem("des");
+  document.getElementById("pin2").value = localStorage.getItem("af");
+  document.getElementById("pin2").readOnly = true;
+  document.getElementById("pin3").value = localStorage.getItem("anax");
+  document.getElementById("pin3").readOnly = true;
+  document.getElementById("pin4").value = localStorage.getItem("tic");
+  document.getElementById("pin4").readOnly = true;
+  document.getElementById("pin5").value = localStorage.getItem("xreosi");
+  document.getElementById("pin5").readOnly = true;
   function bye(){
     window.close();
   }
+</script>
+</body>
+</html>
