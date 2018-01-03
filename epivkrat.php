@@ -94,6 +94,7 @@ session_start(); ?>
 </script>
 <?php
 if(isset($_POST['submit'])&&isset($_POST['email'])){
+  if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
   $servername = "localhost";
   $username = "root";
   $password = "";
@@ -103,16 +104,19 @@ if(isset($_POST['submit'])&&isset($_POST['email'])){
     die("Connection failed: ".mysqli_connect_error());
   }
   mysqli_set_charset($conn,"utf8");
+  $user_mail = mysqli_real_escape_string($conn, $_POST['email']); //security
   $sql = "INSERT INTO kratiseis (ekdromi, anaxorisi, epistrofi, tickets, email,cost)
-  VALUES ('".$_POST['dest']."','".$_POST['anax']."','".$_POST['epis']."','".$_POST['tickets']."','".$_POST['email']."','".$_POST['xreosi']."')";
+  VALUES ('".$_POST['dest']."','".$_POST['anax']."','".$_POST['epis']."','".$_POST['tickets']."','".$user_mail."','".$_POST['xreosi']."')";
   if (mysqli_query($conn, $sql)) {
       echo "Έγινε εγγραφή στην βάση";
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
 mysqli_close($conn);
+}else{
+  echo "Εισάγετε έγκυρη μορφή E-mail";
 }
-
+}
  ?>
 </body>
 </html>
