@@ -19,8 +19,8 @@ session_start(); ?>
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="ikaria.php">Ικαρία</a></li>
-                <li><a href="neyyork.php">Νεα Υόρκη</a></li>
+                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
+                <li><a href="https://localhost/maria/newyork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>
@@ -59,7 +59,8 @@ session_start(); ?>
   <td> <input type="text" id="pin5" name="xreosi" value="" style="text-align:center;"> </td> </tr>
   <tr> <td>  E-MAIL </td>
   <td> <?php if(isset($_SESSION['login_user'])){echo '<input type="text" id="pin6" name="email" value="'.$_SESSION['user_mail'].'" style="text-align:center;" readOnly> </td> </tr>';}
-    else{ echo '<input type="email" id="pin6" name="email"></td></tr>';} ?>
+    else{ echo '<input type="email" id="pin6" name="email"></td></tr><tr><td colspan="2"> Συμπλήρωσε το Email σου </td></tr>';} ?>
+
   </table>
   <input type="reset" value="ΑΚΥΡΩΣΗ" onclick="bye()" style="margin-top:20px;">
   <input type="submit" name="submit" value="ΑΠΟΣΤΟΛΗ" style="margin-top:20px;">
@@ -107,7 +108,7 @@ if(isset($_POST['submit'])&&isset($_POST['email'])){
   $sql = "INSERT INTO kratiseis (ekdromi, anaxorisi, epistrofi, tickets, email,cost)
   VALUES ('".$_POST['dest']."','".$_POST['anax']."','".$_POST['epis']."','".$_POST['tickets']."','".$user_mail."','".$_POST['xreosi']."')";
   if (mysqli_query($conn, $sql)) {
-      echo "Έγινε εγγραφή στην βάση";
+      echo "<br> Έγινε η κρατηση σου";
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }

@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Maria's Travels</title>
-
   <link rel="stylesheet" href="main.css">
+<link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
@@ -19,14 +19,14 @@ session_start(); ?>
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="ikaria.php">Ικαρία</a></li>
-                <li><a href="neyyork.php">Νεα Υόρκη</a></li>
+                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
+                <li><a href="https://localhost/maria/newyork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>
       </li>
       <li>
-          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a> 
+          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
       </li>
       <li>
           <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
@@ -44,24 +44,75 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
+<br>
+<div class="logomain">
+  Maria's Travels
+</div>
 <!-- Slideshow container -->
 <div class="slideshow-container">
   <div class="mySlides fade">
-    <div class="numbertext">1 / 2</div>
-    <a href="ikaria.html"><img src="ikaria.jpg" style="width:100%"></a>
+    <div class="numbertext">1 / 10</div>
+    <a href="https://localhost/maria/ikaria.php"><img src="ikaria.jpg" style="width:100%"></a>
     <div class="text">Παραλία Σεϋχέλλες, Ικαρία</div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 2</div>
-    <a href="neyyork.html"><img src="freedom-tower.jpg" style="width:100%"></a>
+    <div class="numbertext">2 / 10</div>
+    <a href="https://localhost/maria/newyork.php"><img src="freedom-tower.jpg" style="width:100%"></a>
     <div class="text">Νέα Υόρκη, ΉΠΑ</div>
   </div>
 </div>
-<br>
-<div class="content">
-  EDW PERIEXOMENO SELIDAS NENE TI KALA KALA
-  <P> PARAGRAFOS </P>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 10</div>
+    <a href="https://localhost/maria/ikaria.php"><img src="ikaria2.jpg" style="width:100%"></a>
+    <div class="text">Ικαρία, Ελλάδα</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">4 / 10</div>
+    <a href="https://localhost/maria/newyork.php"><img src="newyork2.jpg" style="width:100%"></a>
+    <div class="text">Νέα Υόρκη, ΉΠΑ</div>
+  </div>
+</div>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">5 / 10</div>
+    <a href="https://localhost/maria/ikaria.php"><img src="ikaria3.jpg" style="width:100%"></a>
+    <div class="text">Ικαρία, Ελλάδα</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">6 / 10</div>
+    <a href="https://localhost/maria/newyork.php"><img src="newyork3.jpg" style="width:100%"></a>
+    <div class="text">Νέα Υόρκη, ΉΠΑ</div>
+  </div>
+</div>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">7 / 10</div>
+    <a href="https://localhost/maria/ikaria.php"><img src="ikaria4.jpg" style="width:100%"></a>
+    <div class="text">Ικαρία, Ελλάδα</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">8 / 10</div>
+    <a href="https://localhost/maria/newyork.php"><img src="newyork4.jpg" style="width:100%"></a>
+    <div class="text">Νέα Υόρκη, ΉΠΑ</div>
+  </div>
+</div>
+<div class="slideshow-container">
+  <div class="mySlides fade">
+    <div class="numbertext">9 / 10</div>
+    <a href="https://localhost/maria/ikaria.php"><img src="ikaria5.jpg" style="width:100%"></a>
+    <div class="text">Ικαρία, Ελλάδα</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">10 / 10</div>
+    <a href="https://localhost/maria/newyork.php"><img src="newyork5.jpg" style="width:100%"></a>
+    <div class="text">Νέα Υόρκη, ΉΠΑ</div>
+  </div>
 </div>
 <script>
 var slideIndex = 0;

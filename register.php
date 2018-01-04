@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Είσοδος/Εγγραφή</title>
-  
+
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
@@ -17,8 +17,8 @@
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="ikaria.php">Ικαρία</a></li>
-                <li><a href="neyyork.php">Νεα Υόρκη</a></li>
+                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
+                <li><a href="https://localhost/maria/neywork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>

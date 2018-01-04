@@ -18,8 +18,8 @@ session_start(); ?>
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="ikaria.php">Ικαρία</a></li>
-                <li><a href="neyyork.php">Νεα Υόρκη</a></li>
+                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
+                <li><a href="https://localhost/maria/newyork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>
