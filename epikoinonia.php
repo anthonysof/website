@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Επικοινωνια</title>
-
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
@@ -51,15 +50,16 @@ session_start(); ?>
 <tr> <td> <label for="fsname"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ*  </label> </td>
 <td> <?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="fsname" name="firstname" value="'.$_SESSION['user_name'].'"required>';}
 else{echo '<input type="text" id="fsane" name="firstname" required';} ?><br></td> </tr>
-<tr> <td> <label for="thl"> ΤΗΛΕΦΩΝΟ</label> </td>
+<tr> <td> <label for="thl"> ΤΗΛΕΦΩΝΟ *</label> </td>
 <td> <input type="text" id="thl"  name="zip" ><br > </td> </tr>
 <tr> <td> <label for="mail" >EMAIL* </label> </td>
 <td><?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="mail" name="mail" value="'.$_SESSION['user_mail'].'"required>';}
 else{echo '<input type="email" id="mail" name="mail" required';} ?><br ></td> </tr>
 <tr> <td> <label for="q"> ΕΡΩΤΗΜΑ* </label></td>
 <td><textarea  rows="10" και cols="30" id="q" name="quest" required> </textarea><br></td> </tr>
+<tr> <td colspan="2">  τα πεδια με * ειναι υποχρεωτικά  </td> </tr>
 </table>
-<p> τα πεδια με * ειναι υποχρεωτικά <p>
+<br> 
 <input type="reset" value="ΔΙΑΓΡΑΦΗ ΟΛΩΝ">
 <input id="btn" type="button" value="ΑΠΟΣΤΟΛΗ" onclick="validateForm()">
 </form>
@@ -76,7 +76,7 @@ function validateForm() {
 	emal=document.getElementById('mail').value;
 	que=encodeURIComponent(document.getElementById('q').value); //encode special chars no XSS
 	thlef=document.getElementById('thl').value;
-    if ( onom=="" || emal=="" ||  que==""){
+    if ( onom=="" || emal=="" ||  que=="" || thlef==""){
       alert("ΔΕΝ ΤΑ ΣΥΜΠΛΗΡΩΣΕΣ ΟΛΑ");
     }
 		else

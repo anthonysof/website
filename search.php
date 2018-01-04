@@ -46,8 +46,6 @@ include('session.php'); ?>
 </nav>
 <div class="content">
 <p>Κλεισμένες εκδρομές του χρήστη <?php echo $login_session; ?>:</p>
-
-<div><a href="logout.php">Log Out</a></div>
 </div>
 <?php
 $servername = "localhost";
