@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Επιβεβαιωση Μηνυματος</title>
+  <title>Ικαρία</title>
 
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -44,37 +44,3 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
-<body>
-<H1>ΕΙΣΑΙ ΣΙΓΟΥΡΟΣ;;;;;;;</H1>
-
-<table class="bordepik">
-<tr> <td>  ΟΝΟΜΑΤΕΠΩΝΥΜΟ* </td>
-<td id="pin1"> </td> </tr>
-<tr> <td> ΤΗΛΕΦΩΝΟ </td>
-<td id="pin2"> </td> </tr>
-<tr> <td> EMAIL*  </td>
-<td id="pin3"> </td> </tr>
-<tr> <td>  ΕΡΩΤΗΜΑ* </td>
-<td id="pin4"> </td> </tr>
-</table>
-<input type="reset" value="ΑΚΥΡΩΣΗ" onclick="byebye()">
-<input type="button" value="ΑΠΟΣΤΟΛΗ" onclick="mailme()">
-</form>
-<script>
-document.getElementById("pin1").innerHTML = localStorage.getItem("onoma");
-document.getElementById("pin2").innerHTML = localStorage.getItem("thl");
-document.getElementById("pin3").innerHTML = localStorage.getItem("email");
-document.getElementById("pin4").innerHTML = decodeURIComponent(localStorage.getItem("quest")); //decode encoded special chars
-
-function mailme() {
-  var email = 'sample@gmail.com';
-          var subject = 'Ερώτηση';
-          var emailBody = 'Όνομα: '+localStorage.getItem("onoma")+'\n Τηλέφωνο: '+localStorage.getItem("thl")+' e-mail επικοινωνίας: '+localStorage.getItem("email")+' Ερώτηση: '+decodeURIComponent(localStorage.getItem("quest"));
-          var attach = 'path';
-          document.location = "mailto:"+email+"?subject="+subject+"&body="+emailBody;
-}
-function byebye(){
-  window.close();
-}
-
-</script>

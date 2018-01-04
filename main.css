@@ -3,8 +3,7 @@ body, html {
   font:1em "Raleway", sans-serif;
   text-align: center;
 }
-
-.content {
+.content{
   padding:30px;
 }
 
@@ -21,9 +20,9 @@ a.button {
 }
 .nav-main{
   width:100%;
-  background-color:#222;
+  background-color:#f2f2f2;
   height:70px;
-  color:#fff;
+  color:black;
   overflow-x: hidden;
 }
 
@@ -37,7 +36,7 @@ a.button {
 }
 .logo > a {
   text-decoration:none;
-  color: white;
+  color: black;
 }
 .nav-main > ul {
   margin:0;
@@ -55,22 +54,22 @@ a.button {
   padding: 15px 20px;
   height: 70px;
   line-height: 40px;
-  color:#fff;
+  color:black;
   text-decoration:none;
 }
 
 .nav-item:hover {
-  background-color:#444;
+  background-color:#196666;
 }
 .nav-content {
   position:absolute;
   top:70px;
   overflow:hidden;
-  background-color:#222;
+  background-color:#f2f2f2;
   max-height:0;
 }
 .nav-content a {
-  color:#fff;
+  color:black;
   text-decoration:none;
 }
 .nav-content a:hover {
@@ -90,7 +89,7 @@ a.button {
 }
 
 .nav-item:focus {
-  background-color:#444;
+  background-color:#196666;
 }
 
 .nav-item:focus ~ .nav-content {
@@ -127,10 +126,10 @@ a.button {
   bottom: 0px;
   width: 100%;
   text-align: center;
-  background-color: black;
+  background-color:#196666;
 }
 .numbertext {
-  color: #f2f2f2;
+  color: black;
   font-size: 12px;
   padding: 8px 12px;
   position: absolute;
@@ -153,5 +152,28 @@ a.button {
   from {opacity: .4}
   to {opacity: 1}
 }
-.bordepik{text-align: center; border: 1px solid black; margin: auto; padding: 10px;}
-.krattable{border:1px solid gray; margin: auto; margin-top: 100px;}
+
+.logomain{
+  padding:30px;
+  letter-spacing: 3px;
+  font-variant: small-caps;
+  font-size: 100px;
+  font-family: 'Amatic SC', cursive;
+}
+
+
+
+.bordepik{
+  text-align: center;
+  border: 1px solid black;
+  margin: auto;
+  padding: 10px;
+}
+
+
+
+.krattable{
+  border:1px solid gray;
+  margin: auto;
+  margin-top: 100px;
+}

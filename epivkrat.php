@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Maria's Travels</title>
+  <title>Επιβεβαίωση Κράτησης</title>
 
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -15,33 +15,32 @@ session_start(); ?>
     <div class="logo"><a href="https://localhost/maria/main.php">Maria's Travels</a></div>
     <ul>
       <li>
-          <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
-      </li>
-      <li>
-          <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
-      </li>
-      <li>
-          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a> <!-- "#" allazeis me file, menei=dropdown -->
-      </li>
-      <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="ikaria.html">35ήμερο στην Ικαρία</a></li>
-                <li><a href="neyyork.html">1μιση μέρα στην Νεα Υόρκη</a></li>
+                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
+                <li><a href="https://localhost/maria/newyork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>
       </li>
       <li>
-        <?php if(!isset($_SESSION['login_user'])){echo '<a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
-          else{echo '<a href="https://localhost/maria/logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
+          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
+      </li>
+      <li>
+          <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
+      </li>
+      <li>
+          <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <?php if(isset($_SESSION['login_user'])){
         echo '<li><a href="https://localhost/maria/search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
         ?>
-
+      <li>
+        <?php if(!isset($_SESSION['login_user'])){echo '<a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
+          else{echo '<a href="https://localhost/maria/logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
+      </li>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
@@ -60,7 +59,8 @@ session_start(); ?>
   <td> <input type="text" id="pin5" name="xreosi" value="" style="text-align:center;"> </td> </tr>
   <tr> <td>  E-MAIL </td>
   <td> <?php if(isset($_SESSION['login_user'])){echo '<input type="text" id="pin6" name="email" value="'.$_SESSION['user_mail'].'" style="text-align:center;" readOnly> </td> </tr>';}
-    else{ echo '<input type="email" id="pin6" name="email"></td></tr>';} ?>
+    else{ echo '<input type="email" id="pin6" name="email"></td></tr><tr><td colspan="2"> Συμπλήρωσε το Email σου </td></tr>';} ?>
+
   </table>
   <input type="reset" value="ΑΚΥΡΩΣΗ" onclick="bye()" style="margin-top:20px;">
   <input type="submit" name="submit" value="ΑΠΟΣΤΟΛΗ" style="margin-top:20px;">
@@ -108,7 +108,7 @@ if(isset($_POST['submit'])&&isset($_POST['email'])){
   $sql = "INSERT INTO kratiseis (ekdromi, anaxorisi, epistrofi, tickets, email,cost)
   VALUES ('".$_POST['dest']."','".$_POST['anax']."','".$_POST['epis']."','".$_POST['tickets']."','".$user_mail."','".$_POST['xreosi']."')";
   if (mysqli_query($conn, $sql)) {
-      echo "Έγινε εγγραφή στην βάση";
+      echo "<br> Έγινε η κρατηση σου";
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);
   }
