@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>Maria's Travels</title>
+  <title>New York</title>
 
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
@@ -26,7 +26,7 @@ session_start(); ?>
           </div>
       </li>
       <li>
-          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a> 
+          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
       </li>
       <li>
           <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
@@ -44,40 +44,3 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
-<!-- Slideshow container -->
-<div class="slideshow-container">
-  <div class="mySlides fade">
-    <div class="numbertext">1 / 2</div>
-    <a href="ikaria.html"><img src="ikaria.jpg" style="width:100%"></a>
-    <div class="text">Παραλία Σεϋχέλλες, Ικαρία</div>
-  </div>
-
-  <div class="mySlides fade">
-    <div class="numbertext">2 / 2</div>
-    <a href="neyyork.html"><img src="freedom-tower.jpg" style="width:100%"></a>
-    <div class="text">Νέα Υόρκη, ΉΠΑ</div>
-  </div>
-</div>
-<br>
-<div class="content">
-  EDW PERIEXOMENO SELIDAS NENE TI KALA KALA
-  <P> PARAGRAFOS </P>
-</div>
-<script>
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
-}
-</script>
-</body>
-</html>
