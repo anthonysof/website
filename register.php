@@ -143,7 +143,7 @@ if (isset($_POST['con'])&&$_POST['con']=="1"&&isset($_POST['email'])&&$_POST['em
   else{
     $sql = "INSERT INTO users (email,username,password,firstname,surname) VALUES ('".$_POST['email']."','".$_POST['username']."','".$passwordu."','".$_POST['FirstName']."','".$_POST['LastName']."')";
     if (mysqli_query($conn, $sql)) {
-        echo "Έγινε εγγραφή στην βάση";
+        echo "Επιτυχημένη εγγραφή";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
