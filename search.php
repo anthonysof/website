@@ -45,7 +45,7 @@ include('session.php'); ?>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <div class="content">
-<p>Κλεισμένες εκδρομές του χρήστη <?php echo $login_session; ?>:</p>
+<p> <b>Κλεισμένες εκδρομές του χρήστη <?php echo $login_session; ?>:</b></p>
 </div>
 <?php
 $servername = "localhost";

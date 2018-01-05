@@ -43,12 +43,12 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
-<table class="bordepik"  >
+<table class="bordepik" cellpadding="5" cellspacing="5">
 <form>
 <tr> <th colspan="2" > ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ </th> </tr>
 <tr> <td> <label for="fsname"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ*  </label> </td>
 <td> <?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="fsname" name="firstname" value="'.$_SESSION['user_name'].'"required>';}
-else{echo '<input type="text" id="fsane" name="firstname" required';} ?><br></td> </tr>
+else{echo '<input type="text" id="fsname" name="firstname" required';} ?><br></td> </tr>
 <tr> <td> <label for="thl"> ΤΗΛΕΦΩΝΟ *</label> </td>
 <td> <input type="text" id="thl"  name="zip" ><br > </td> </tr>
 <tr> <td> <label for="mail" >EMAIL* </label> </td>
@@ -59,8 +59,8 @@ else{echo '<input type="email" id="mail" name="mail" required';} ?><br ></td> </
 <tr> <td colspan="2">  τα πεδια με * ειναι υποχρεωτικά  </td> </tr>
 </table>
 <br>
-<input type="reset" value="ΔΙΑΓΡΑΦΗ ΟΛΩΝ">
-<input id="btn" type="button" value="ΑΠΟΣΤΟΛΗ" onclick="validateForm()">
+<input class="buttonsreg" type="reset" value="ΔΙΑΓΡΑΦΗ">
+<input class="buttonsreg" id="btn" type="submit" value="ΑΠΟΣΤΟΛΗ" onclick="validateForm()">
 </form>
 </body>
 <script>
@@ -75,7 +75,7 @@ function validateForm() {
 	emal=document.getElementById('mail').value;
 	que=encodeURIComponent(document.getElementById('q').value); //encode special chars no XSS
 	thlef=document.getElementById('thl').value;
-    if ( onom=="" || emal=="" ||  que=="" || thlef==""){
+    if ( onom=="" || emal=="" ||  que=="" ){
       alert("ΔΕΝ ΤΑ ΣΥΜΠΛΗΡΩΣΕΣ ΟΛΑ");
     }
 		else

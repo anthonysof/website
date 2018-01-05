@@ -45,9 +45,9 @@ session_start(); ?>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <body>
-<H1>ΕΙΣΑΙ ΣΙΓΟΥΡΟΣ;;;;;;;</H1>
+<H2>ΕΙΣΑΙ ΣΙΓΟΥΡΟΣ;</H2>
 
-<table class="bordepik">
+<table class="bordepik" cellpadding="5" cellspacing="5">
 <tr> <td>  ΟΝΟΜΑΤΕΠΩΝΥΜΟ* </td>
 <td id="pin1"> </td> </tr>
 <tr> <td> ΤΗΛΕΦΩΝΟ </td>
@@ -57,8 +57,8 @@ session_start(); ?>
 <tr> <td>  ΕΡΩΤΗΜΑ* </td>
 <td id="pin4"> </td> </tr>
 </table>
-<input type="reset" value="ΑΚΥΡΩΣΗ" onclick="byebye()">
-<input type="button" value="ΑΠΟΣΤΟΛΗ" onclick="mailme()">
+<input class="buttonsreg" type="reset" value="ΑΚΥΡΩΣΗ" onclick="byebye()">
+<input class="buttonsreg" type="button" value="ΑΠΟΣΤΟΛΗ" onclick="mailme()">
 </form>
 <script>
 document.getElementById("pin1").innerHTML = localStorage.getItem("onoma");

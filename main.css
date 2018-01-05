@@ -199,10 +199,11 @@ font-family: 'Didact Gothic', sans-serif;
 
 .bordepik{
   text-align: center;
-  border: 1px solid black;
   margin: auto;
   padding: 10px;
- margin-top: 10px;
+ margin-top: 15px;
+ border:none;
+  width: 400px;
 }
 
 
