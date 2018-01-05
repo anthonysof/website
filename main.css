@@ -1,6 +1,5 @@
 body, html {
   margin:0;
-  /*font:1em "Raleway", sans-serif;*/
 font-family: 'Didact Gothic', sans-serif;
   text-align: center;
 }
@@ -72,6 +71,8 @@ font-family: 'Didact Gothic', sans-serif;
 .logo > a {
   text-decoration:none;
   color: black;
+  font-family: 'Amatic SC', cursive;
+  font-size: 45px;
 }
 .nav-main > ul {
   margin:0;
@@ -152,7 +153,6 @@ font-family: 'Didact Gothic', sans-serif;
 
 .text {
   color: white;
-  font:1em "Raleway", sans-serif;
   font-size: 15px;
   font-weight: bold;
   padding: 8px 12px;
@@ -188,11 +188,12 @@ font-family: 'Didact Gothic', sans-serif;
 }
 
 .logomain{
-  padding:30px;
   letter-spacing: 3px;
   font-variant: small-caps;
   font-size: 100px;
   font-family: 'Amatic SC', cursive;
+  margin-top: 5px;
+  margin-bottom: 30px;
 }
 
 

@@ -5,7 +5,8 @@
   <title>Επιβεβαιωση Μηνυματος</title>
 
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <?php
@@ -44,7 +45,10 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
-<body>
+  <br>
+  <div class="logomain">
+    Maria's Travels
+  </div>
 <H2>ΕΙΣΑΙ ΣΙΓΟΥΡΟΣ;</H2>
 
 <table class="bordepik" cellpadding="5" cellspacing="5">
@@ -60,6 +64,7 @@ session_start(); ?>
 <input class="buttonsreg" type="reset" value="ΑΚΥΡΩΣΗ" onclick="byebye()">
 <input class="buttonsreg" type="button" value="ΑΠΟΣΤΟΛΗ" onclick="mailme()">
 </form>
+</body>
 <script>
 document.getElementById("pin1").innerHTML = localStorage.getItem("onoma");
 document.getElementById("pin2").innerHTML = localStorage.getItem("thl");
@@ -78,3 +83,4 @@ function byebye(){
 }
 
 </script>
+</html>

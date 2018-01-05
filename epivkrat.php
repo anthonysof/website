@@ -5,7 +5,8 @@
   <title>Maria's Travels</title>
 
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <?php
@@ -45,6 +46,10 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
+<br>
+<div class="logomain">
+  Maria's Travels
+</div>
 <div class="content">
 <form method="post">
 <table style="margin:auto;">
@@ -66,6 +71,7 @@ session_start(); ?>
   <input class="buttonsreg" type="submit" name="submit" value="ΑΠΟΣΤΟΛΗ" style="margin-top:20px;">
   </form>
 </div>
+</body>
   <script>
   var dest=localStorage.getItem("des");
    if (dest=="100")
@@ -118,5 +124,4 @@ mysqli_close($conn);
 }
 }
  ?>
-</body>
 </html>

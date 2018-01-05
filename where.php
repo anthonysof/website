@@ -5,7 +5,8 @@
   <title>Maria's Travels</title>
 
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <?php
@@ -44,6 +45,10 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
+<br>
+<div class="logomain">
+  Maria's Travels
+</div>
 <h2> ΠΟΥ ΘΑ ΜΑΣ ΒΡΕΙΤΕ</h2>
 <p> ΔΙΕΥΘΥΝΣΗ : Αργοναυτων 59, Μαρουσι <br> Τηλεφωνο Επικοινωνιας : 2108024522<p>
 <br>
@@ -61,6 +66,7 @@ session_start(); ?>
 <tr> <td>ΚΥΡΙΑΚΗ </td> <td>ΚΛΕΙΣΤΑ </td> </tr>
 </table>
 <br> <br> <br> <br>
+</body>
 
 <script>
 function myMap() {
@@ -73,5 +79,4 @@ marker.setMap(map);
 }
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXOIB2USUYp8jbyNlvbiD3pNT1Atr_Cyg&callback=myMap"></script>
-</body>
 </html>
