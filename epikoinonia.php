@@ -48,7 +48,7 @@ session_start(); ?>
 <tr> <th colspan="2" > ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ </th> </tr>
 <tr> <td> <label for="fsname"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ*  </label> </td>
 <td> <?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="fsname" name="firstname" value="'.$_SESSION['user_name'].'"required>';}
-else{echo '<input type="text" id="fsane" name="firstname" required';} ?><br></td> </tr>
+else{echo '<input type="text" id="fsname" name="firstname" required';} ?><br></td> </tr>
 <tr> <td> <label for="thl"> ΤΗΛΕΦΩΝΟ *</label> </td>
 <td> <input type="text" id="thl"  name="zip" ><br > </td> </tr>
 <tr> <td> <label for="mail" >EMAIL* </label> </td>
