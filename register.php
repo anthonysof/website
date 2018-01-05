@@ -45,7 +45,7 @@
 <div class="content">
   <h2>Εγγραφή Νέου Χρήστη</h2>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-  <table border="0" cellpadding="5" cellspacing="0" width="600">
+  <table   cellpadding="10" cellspacing="5" class="registertable">
   <tr>
   <td><b>Ονοματεπώνυμο*:</b></td>
   <td>
@@ -65,8 +65,8 @@
   <td><b>Επιβεβαίωση Κωδικού*:</b></td>
   <td><input id="confpass" name="confpass" type="password" maxlength="120" required></td>
   </tr><tr>
-  <td><input type="reset" name="reset" value="Καθαρισμός"></td>
-  <td><input type="submit" name="submit" value="Εγγραφή" onclick="valForm()"></td></tr>
+  <td><input class="buttonsreg" type="reset" name="reset" value="Καθαρισμός"></td>
+  <td><input class="buttonsreg" type="submit" name="submit" value="Εγγραφή" onclick="valForm()"></td></tr>
 
 </table><input type="hidden" name="con" id="con" value="0"></form>
 </div>

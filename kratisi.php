@@ -45,17 +45,19 @@ session_start(); ?>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <form>
-<table class="krattable">
-<tr> <td colspan="3"> <label for="des"> Προορισμος </td> </tr>
-  <tr> <td colspan="3"> <select id="des" name="des">
-  <option value="100">Ikaria</option>
+<table cellpadding="10" cellspacing="5" class="krattable">
+<tr> <td > <label for="des"> <b>Προορισμός</b> </td>
+  <td > <select id="des" name="des">
+  <option value="100">Ικαρία</option>
   <option value="1500">New York</option>
 </select></td> </tr>
-<tr> <td > <label for="af">Αναχώρηση </label> </td> <td > <label for="anax">Επιστροφή </label> </td> </tr>
-<tr><td> <input type="date" name="af" id="af" required  min="<?php echo date('Y-m-d');?>"></td> <td> <input type="date" id="anax" name="anax" required  > </tr>
-<tr> <td colspan="3"> <label for="tic">Εισητηρια </td> </tr>
-<tr > <td colspan="3"> <input type="text" id="tic" name="tic" maxlength="2" size="2"></td> </tr>
-<tr> <td colspan="3" > <input  id="btn" type="submit" value="ΑΝΑΖΗΤΗΣΗ" onclick="validateForm()"> </td> </tr>
+<tr> <td > <label for="af"><b>Αναχώρηση </b></label> </td>
+     <td><input type="date" name="af" id="af" required  min="<?php echo date('Y-m-d');?>"></td>
+<tr><td > <label for="anax"><b>Επιστροφή</b> </label> </td>
+    <td> <input type="date" id="anax" name="anax" required  > </tr>
+<tr> <td > <label for="tic"><b>Εισιτήρια</b> </td>
+     <td > <input type="text" id="tic" name="tic" maxlength="2" size="2"></td> </tr>
+<tr > <td colspan="2"> <input class="buttonkrat"id="btn" type="submit" value="ΑΝΑΖΗΤΗΣΗ" onclick="validateForm()"> </td> </tr>
 </table>
 </form>
 <script>

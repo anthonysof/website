@@ -49,16 +49,18 @@ header("location: search.php");
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
 <div class="content">
-  <table style="align:center;float:center;">
+  <table class="logintable" cellpadding="5" cellspacing="5">
     <form method="post">
-    <tr><th colspan="2">Είσοδος Χρήστη</th></tr>
-    <tr><td>Username: </td><td><input type="text" id="username" name="username"></td></tr>
-    <tr><td>Password: </td><td><input type="password" id="password" name="password"></td></tr>
-    <td><a href="https://localhost/maria/register.php" class="button">Εγγραφή</a></td>
-    <td><input type="submit" id="submit" name="submit" value="Είσοδος"></td></tr></form>
-
+    <tr><th colspan="2" style=" font-size:20px ;">Είσοδος Χρήστη</th></tr>
+    <tr><td><label for="username">Username:<label> </td>
+        <td><input type="text" placeholder="username"id="username" name="username"></td></tr>
+    <tr><td><label for"password">Password: <label></td>
+        <td><input placeholder="password"type="password" id="password" name="password"></td></tr>
+    <tr><td colspan="2"><input class="buttons" type="submit" id="submit" name="submit" value="Είσοδος"></td></tr></form>
+    <tr> <td colspan="2"><span><?php echo $error; ?></span></td></tr>
   </table>
-  <span><?php echo $error; ?></span>
+  <a href="https://localhost/maria/register.php" class="button">Εγγραφή</a>
+
 
 </div>
 </body>
