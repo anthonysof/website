@@ -5,7 +5,8 @@
   <title>Είσοδος/Εγγραφή</title>
 
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <?php
@@ -48,6 +49,10 @@ header("location: search.php");
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
+<br>
+<div class="logomain">
+  Maria's Travels
+</div>
 <div class="content">
   <table class="logintable" cellpadding="5" cellspacing="5">
     <form method="post">

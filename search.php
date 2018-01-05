@@ -7,7 +7,8 @@ include('session.php'); ?>
   <title>Maria's Travels</title>
 
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <body>
@@ -44,9 +45,14 @@ include('session.php'); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
-<div class="content">
-<p>Κλεισμένες εκδρομές του χρήστη <?php echo $login_session; ?>:</p>
+<br>
+<div class="logomain">
+  Maria's Travels
 </div>
+<div class="content">
+<p> <b>Κλεισμένες εκδρομές του χρήστη <?php echo $login_session; ?>:</b></p>
+</div>
+</body>
 <?php
 $servername = "localhost";
 $username = "root";
@@ -77,5 +83,4 @@ if(mysqli_num_rows($result) > 0){
   }
   mysqli_close($conn);
  ?>
-</body>
 </html>

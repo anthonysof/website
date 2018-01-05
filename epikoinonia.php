@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>Επικοινωνια</title>
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <?php
@@ -43,24 +44,32 @@ session_start(); ?>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
-<table class="bordepik"  >
+<br>
+<div class="logomain">
+  Maria's Travels
+</div>
+<table class="bordepik" cellpadding="5" cellspacing="5">
 <form>
 <tr> <th colspan="2" > ΦΟΡΜΑ ΕΠΙΚΟΙΝΩΝΙΑΣ </th> </tr>
 <tr> <td> <label for="fsname"> ΟΝΟΜΑΤΕΠΩΝΥΜΟ*  </label> </td>
 <td> <?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="fsname" name="firstname" value="'.$_SESSION['user_name'].'"required>';}
+<<<<<<< HEAD
 else{echo '<input type="text" id="fsname" name="firstname" required';} ?><br></td> </tr>
+=======
+else{echo '<input type="text" id="fsname" placeholder="όνομα επώνυμο" name="firstname" required';} ?><br></td> </tr>
+>>>>>>> 8a7eb4d9df183e8eaa1786fc94ab0ab2104d25a4
 <tr> <td> <label for="thl"> ΤΗΛΕΦΩΝΟ *</label> </td>
-<td> <input type="text" id="thl"  name="zip" ><br > </td> </tr>
+<td> <input type="text" id="thl" placeholder="2101111111"  name="zip" ><br > </td> </tr>
 <tr> <td> <label for="mail" >EMAIL* </label> </td>
 <td><?php if(isset($_SESSION['user_name'])){echo '<input type="text" id="mail" name="mail" value="'.$_SESSION['user_mail'].'"required>';}
-else{echo '<input type="email" id="mail" name="mail" required';} ?><br ></td> </tr>
+else{echo '<input type="email" id="mail" placeholder="sample@gmail.com" name="mail" required';} ?><br ></td> </tr>
 <tr> <td> <label for="q"> ΕΡΩΤΗΜΑ* </label></td>
-<td><textarea  rows="10" και cols="30" id="q" name="quest" required> </textarea><br></td> </tr>
+<td><textarea  rows="10" cols="30" id="q" name="quest" required> </textarea><br></td> </tr>
 <tr> <td colspan="2">  τα πεδια με * ειναι υποχρεωτικά  </td> </tr>
 </table>
 <br>
-<input type="reset" value="ΔΙΑΓΡΑΦΗ ΟΛΩΝ">
-<input id="btn" type="button" value="ΑΠΟΣΤΟΛΗ" onclick="validateForm()">
+<input class="buttonsreg" type="reset" value="ΔΙΑΓΡΑΦΗ">
+<input class="buttonsreg" id="btn" type="submit" value="ΑΠΟΣΤΟΛΗ" onclick="validateForm()">
 </form>
 </body>
 <script>
@@ -75,7 +84,7 @@ function validateForm() {
 	emal=document.getElementById('mail').value;
 	que=encodeURIComponent(document.getElementById('q').value); //encode special chars no XSS
 	thlef=document.getElementById('thl').value;
-    if ( onom=="" || emal=="" ||  que=="" || thlef==""){
+    if ( onom=="" || emal=="" ||  que=="" ){
       alert("ΔΕΝ ΤΑ ΣΥΜΠΛΗΡΩΣΕΣ ΟΛΑ");
     }
 		else

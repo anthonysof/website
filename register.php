@@ -5,7 +5,8 @@
   <title>Είσοδος/Εγγραφή</title>
 
   <link rel="stylesheet" href="main.css">
-  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <body>
@@ -42,34 +43,39 @@
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
 </nav>
+<br>
+<div class="logomain">
+  Maria's Travels
+</div>
 <div class="content">
   <h2>Εγγραφή Νέου Χρήστη</h2>
   <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
   <table   cellpadding="10" cellspacing="5" class="registertable">
   <tr>
-  <td><b>Ονοματεπώνυμο*:</b></td>
+  <td><label for="FirstName"><b>Ονοματεπώνυμο*:</b></label></td>
   <td>
-  <input id="FirstName" name="FirstName" type="text" maxlength="60" required>
-  <input id="LastName" name="LastName" type="text" maxlength="60"  required>
+  <input id="FirstName" placeholder="Ονομα"name="FirstName" type="text" maxlength="60" required>
+  <input id="LastName" name="LastName" placeholder="Επώνυμο"type="text" maxlength="60"  required>
   </td>
   </tr><tr>
-  <td><b>Διεύθυνση Email*:</b></td>
-  <td><input id="email" name="email" type="email" maxlength="60" </td>
+  <td><label for="email"><b>Διεύθυνση Email*:</b></label></td>
+  <td><input id="email" placeholder="sample@gmail.com"name="email" type="email" maxlength="60" </td>
   </tr><tr>
-  <td><b>Username*:</b></td>
-  <td><input id="username" name="username" type="text" maxlength="60" required></td>
+  <td><label for="username"><b>Username*:</b></label></td>
+  <td><input id="username" placeholder="username"name="username" type="text" maxlength="60" required></td>
   </tr><tr>
-  <td><b>Κωδικός*:</b></td>
-  <td><input id="password" name="password" type="password" maxlength="120" required></td>
+  <td><label for="password"><b>Κωδικός*:</b></label></td>
+  <td><input id="password" placeholder="password"name="password" type="password" maxlength="120" required></td>
   </tr><tr>
-  <td><b>Επιβεβαίωση Κωδικού*:</b></td>
-  <td><input id="confpass" name="confpass" type="password" maxlength="120" required></td>
+  <td><label for="confpass"><b>Επιβεβαίωση Κωδικού*:</b></label></td>
+  <td><input id="confpass" placeholder="password"name="confpass" type="password" maxlength="120" required></td>
   </tr><tr>
   <td><input class="buttonsreg" type="reset" name="reset" value="Καθαρισμός"></td>
   <td><input class="buttonsreg" type="submit" name="submit" value="Εγγραφή" onclick="valForm()"></td></tr>
 
 </table><input type="hidden" name="con" id="con" value="0"></form>
 </div>
+</body>
 <script>
 function validateField(data,regex) {
     return regex.test(data);
@@ -150,5 +156,4 @@ if (isset($_POST['con'])&&$_POST['con']=="1"&&isset($_POST['email'])&&$_POST['em
   }
 mysqli_close($conn);
   } ?>
-</body>
 </html>
