@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Ικαρία</title>
-
   <link rel="stylesheet" href="main.css">
   <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Didact+Gothic" rel="stylesheet">
