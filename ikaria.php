@@ -49,6 +49,7 @@ session_start(); ?>
 <div class="logomain">
   Maria's Travels
 </div>
+<div class="page-wrap">
 <h1> Ικαρία </h1>
 <br><br><br><br>
 <iframe style="float:left; margin-left:10px;"width="560" height="315" src="https://www.youtube.com/embed/3PsPaLgoL88?rel=0&amp;start=3" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
@@ -78,6 +79,7 @@ session_start(); ?>
           <img src="faros.jpg" style="width:350px;margin-right:700px;margin-top:-100px;">
     </li>
   </ul>
+</div>
 </div>
 <br> <br>
 <p> Με μονο 100€ το ατομο ταξιδεψτε απο και προς την ικαρια για να επισκευθειτε το ξεχωριστο αυτο νησι. Θα σας μεινει σιγουρα αξεχαστο.
