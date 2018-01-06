@@ -8,6 +8,17 @@ width: 1400px;
 margin: 0 auto;
 position: relative;
 }
+.aa {
+  text-decoration: underline;
+  color:black;
+}
+.aa:hover{
+  text-decoration: underline;
+}
+.aa:visited{
+  text-decoration: none;
+  color:black;
+}
 .content{
   padding:30px;
 }

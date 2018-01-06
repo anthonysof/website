@@ -53,9 +53,9 @@ session_start(); ?>
 <h1> Ικαρία </h1>
 <br><br><br><br>
 <iframe style="float:left; margin-left:10px;"width="560" height="315" src="https://www.youtube.com/embed/3PsPaLgoL88?rel=0&amp;start=3" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
-<p style="text-align:center; margin-left:10px; margin-right:10px; margin-top:100px;"> Σας καλωσορίζουμε στην Ικαρία, ένα διαφορετικό ελληνικό νησί στο Αιγαίο,με αξέχαστες <a href= "#paralies"> παραλίες</a>.
+<p style="text-align:center; margin-left:10px; margin-right:10px; margin-top:100px;"> Σας καλωσορίζουμε στην Ικαρία, ένα διαφορετικό ελληνικό νησί στο Αιγαίο,με αξέχαστες <a  class="aa"href= "#paralies"> παραλίες</a>.
                          <br>Εδώ, θα βρείτε πληροφορίες για αξέχαστες διακοπές.
-                         <br>Η Ικαρία σας περιμένει για ένα μοναδικό <a href="https://localhost/maria/kratisi.php">ταξίδι</a> στη ζωή και το χρόνο.</p>
+                         <br>Η Ικαρία σας περιμένει για ένα μοναδικό <a class="aa" href="https://localhost/maria/kratisi.php">ταξίδι</a> στη ζωή και το χρόνο.</p>
 <div style="float:center;margin-top:280px;">
   <h2 id="paralies" style="font-size:40px;"> Παραλιες</h2>
   <ul style="list-style-type:none;">
@@ -83,7 +83,7 @@ session_start(); ?>
 </div>
 <br> <br>
 <p> Με μονο 100€ το ατομο ταξιδεψτε απο και προς την ικαρια για να επισκευθειτε το ξεχωριστο αυτο νησι. Θα σας μεινει σιγουρα αξεχαστο.
-   <a href="https://localhost/maria/kratisi.php">Κλεισε εισητηρια εδω </a></p>
+   <a class="aa" href="https://localhost/maria/kratisi.php">Κλεισε εισητηρια εδω </a></p>
 <p> Για να κλεισετε οικονομικα ξενοδοχεια:</p>
 <iframe src="https://www.trivago.gr/?iSemThemeId=1356&iPathId=447597&sem_keyword=%CE%BE%CE%B5%CE%BD%CE%BF%CE%B4%CE%BF%CF%87%CE%B5%CE%B9%CE%B1%20%CE%B9%CE%BA%CE%B1%CF%81%CE%B9%CE%B1&sem_creativeid=199077553619&sem_matchtype=e&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=1t2&sem_param1=&sem_param2=&sem_campaignid=181654025&sem_adgroupid=14242661105&sem_targetid=kwd-39381107600&sem_location=9061582&cip=30124010101&gclid=CjwKCAiAhMLSBRBJEiwAlFrsTnSLZyiuw4t4TM6qpE33yUbEKxhUNVJN8HxqkeOpvwuhMZeLaFqiAxoCJ4kQAvD_BwE" name="iframe_a" width="500" height="500" >
  <p>Ο φυλλομετρητής σας δεν υποστηρίζει πλαίσια</p>
