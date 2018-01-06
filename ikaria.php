@@ -49,5 +49,16 @@ session_start(); ?>
 <div class="logomain">
   Maria's Travels
 </div>
+<h1> Ικαρία </h1>
+<br><br><br><br>
+<iframe style="float:left; margin-left:10px;"width="560" height="315" src="https://www.youtube.com/embed/3PsPaLgoL88?rel=0&amp;start=3" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<p style="text-align:center; margin-left:10px; margin-right:10px; margin-top:100px;"> Σας καλωσορίζουμε στην Ικαρία, ένα διαφορετικό ελληνικό νησί στο Αιγαίο.
+                         <br>Εδώ, θα βρείτε πληροφορίες για αξέχαστες διακοπές.
+                         <br>Η Ικαρία σας περιμένει για ένα μοναδικό ταξίδι στη ζωή και το χρόνο.</p>
+<div style="float:center;margin-top:300px;">
+  
+  <h2> Παραλιες</h2>
+  <p>
+</div>
 </body>
 </html>

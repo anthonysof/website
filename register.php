@@ -76,6 +76,7 @@
 </table><input type="hidden" name="con" id="con" value="0"></form>
 </div>
 </body>
+
 <script>
 function validateField(data,regex) {
     return regex.test(data);
