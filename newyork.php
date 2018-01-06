@@ -50,4 +50,5 @@ session_start(); ?>
   Maria's Travels
 </div>
 </body>
+
 </html>

@@ -67,6 +67,7 @@ else{echo '<input type="email" id="mail" placeholder="sample@gmail.com" name="ma
 <input class="buttonsreg" type="reset" value="ΔΙΑΓΡΑΦΗ">
 <input class="buttonsreg" id="btn" type="submit" value="ΑΠΟΣΤΟΛΗ" onclick="validateForm()">
 </form>
+<br>
 </body>
 <script>
 var onom, emal, que, thlef;

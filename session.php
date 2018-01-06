@@ -18,3 +18,4 @@ mysqli_close($conn); // Closing Connection
 header('Location: login.php'); // Redirecting To Home Page
 }
  ?>
+ 
