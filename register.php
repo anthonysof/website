@@ -49,7 +49,7 @@
 </div>
 <div class="content">
   <h2>Εγγραφή Νέου Χρήστη</h2>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
+  <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);//περναει τα παντα απο την σπεσιαλ καρσ στην φορμα?>">
   <table   cellpadding="10" cellspacing="5" class="registertable">
   <tr>
   <td><label for="FirstName"><b>Ονοματεπώνυμο*:</b></label></td>

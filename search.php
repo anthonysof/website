@@ -68,8 +68,8 @@ $result = mysqli_query($conn, $sql);
 if(mysqli_num_rows($result) > 0){
     echo "<table style='border:1px solid black; margin:auto;'>";
     echo
-    "<tr><th>email:</th><th>Προορισμός:</th><th>Αναχώρηση</th><th>Επιστροφή</th><th>Εισητήρια</th><th>Χρέωση</th></tr>";
-    while($row=mysqli_fetch_assoc($result)){
+    "<tr><th>email:</th><th>Προορισμός:</th><th>Αναχώρηση</th><th>Επιστροφή</th><th>Εισιτήρια</th><th>Χρέωση</th></tr>";
+    while($row=mysqli_fetch_assoc($result)){//θα επιστρεψει φολσ οταν δεν εχει αλλες εκδρομες φτιαχνει πολλα πινακακια απο ολες τις εκδρομες του χρηστη
       echo"<tr><td>".$row['email']."</td>".
           "<td>".$row['ekdromi']."</td>".
           "<td>".$row['anaxorisi']."</td>".
@@ -83,5 +83,4 @@ if(mysqli_num_rows($result) > 0){
   }
   mysqli_close($conn);
  ?>
- 
 </html>

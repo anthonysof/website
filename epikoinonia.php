@@ -72,14 +72,14 @@ else{echo '<input type="email" id="mail" placeholder="sample@gmail.com" name="ma
 <script>
 var onom, emal, que, thlef;
 
-function validateField(data,regex) {
-    return regex.test(data);
+function validateField(data,regex) { //παιρνει τι να τσεκαρει και συμφωνα με τι να το τσεκαρει
+    return regex.test(data); //ετοιμη
 }
 
 function validateForm() {
 	onom=document.getElementById('fsname').value;
 	emal=document.getElementById('mail').value;
-	que=encodeURIComponent(document.getElementById('q').value); //encode special chars no XSS
+	que=encodeURIComponent(document.getElementById('q').value); //παιρνει τα σπεσιαλ συμβολα και τα μεταφραζει σε κατι αλλο για να μην γραψει κωδικα
 	thlef=document.getElementById('thl').value;
     if ( onom=="" || emal=="" ||  que=="" ){
       alert("ΔΕΝ ΤΑ ΣΥΜΠΛΗΡΩΣΕΣ ΟΛΑ");
@@ -87,7 +87,7 @@ function validateForm() {
 		else
 		{
       if (validateField(emal,/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)){
-        if (validateField(onom,/^[A-Za-zα-ωΑ-Ω\s]*$/)){
+        if (validateField(onom,/^[A-Za-zα-ωΑ-Ω\s]*$/)){ //δεν παιρνει τονους
           if (validateField(thlef,/^\d{10}$/)){
 		localStorage.setItem("onoma", onom);
 		localStorage.setItem("email", emal);

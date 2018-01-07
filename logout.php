@@ -1,8 +1,7 @@
-
 <?php
 session_start();
-if(session_destroy()) // Destroying All Sessions
+if(session_destroy()) // καταστρεφει ολα τα σεσιον
 {
-header("Location: login.php"); // Redirecting To Home Page
+header("Location: login.php"); // και με παει στο λογκιν
 }
 ?>

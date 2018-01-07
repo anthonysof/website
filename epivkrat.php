@@ -80,7 +80,7 @@ session_start(); ?>
   else {
     document.getElementById("pin1").value = "New York";
   }
-  document.getElementById("pin1").readOnly = true;
+  document.getElementById("pin1").readOnly = true; //για να παρει πρωτα το value και μετα ειναι σαν να βαζει στο ινπυτ το readonly
 
   document.getElementById("pin2").value = localStorage.getItem("af");
   document.getElementById("pin2").readOnly = true;
@@ -89,7 +89,7 @@ session_start(); ?>
   document.getElementById("pin4").value = localStorage.getItem("tic");
   document.getElementById("pin4").readOnly = true;
   var cost = localStorage.getItem("xreosi");
-  cost += "€";
+  cost += "€"; //προσθετει το συμβολο του ευρω
   document.getElementById("pin5").value = cost;
   document.getElementById("pin5").readOnly = true;
   function bye(){
@@ -99,20 +99,20 @@ session_start(); ?>
 </script>
 <?php
 if(isset($_POST['submit'])&&isset($_POST['email'])){
-  if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+  if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){ //ετοιμη συναρτηση αν το ιμειλ ειναι σωστο
   $servername = "localhost";
   $username = "root";
   $password = "";
   $dbname = "userdb";
-  $conn = mysqli_connect($servername,$username,$password,$dbname);
+  $conn = mysqli_connect($servername,$username,$password,$dbname);//αν τα εχει παρει τα ορισματα θα μας αφησει να μπουμε αλλιως θα μας πεταξει ερορ
   if(!$conn) {
     die("Connection failed: ".mysqli_connect_error());
   }
-  mysqli_set_charset($conn,"utf8");
-  $user_mail = mysqli_real_escape_string($conn, $_POST['email']); //security
+  mysqli_set_charset($conn,"utf8");//πρωτο ορισμα το κον για να πω σε ποια συνδεση ειμαι
+  $user_mail = mysqli_real_escape_string($conn, $_POST['email']); //extra security για να κανει escape τα special cars
   $sql = "INSERT INTO kratiseis (ekdromi, anaxorisi, epistrofi, tickets, email,cost)
   VALUES ('".$_POST['dest']."','".$_POST['anax']."','".$_POST['epis']."','".$_POST['tickets']."','".$user_mail."','".$_POST['xreosi']."')";
-  if (mysqli_query($conn, $sql)) {
+  if (mysqli_query($conn, $sql)) { 
       echo "Έγινε η κράτηση";
   } else {
       echo "Error: " . $sql . "<br>" . mysqli_error($conn);

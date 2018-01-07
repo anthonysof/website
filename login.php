@@ -12,7 +12,7 @@
 <?php
 include('loginproc.php');
 if(isset($_SESSION['login_user'])){
-header("location: search.php");
+header("location: search.php");//τσεκαρει αν ο χρηστης ειναι login και τον πεταει κατευθειαν στο search (manualy)
 }
 ?>
 <body>

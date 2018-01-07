@@ -89,7 +89,7 @@ localStorage.setItem("af", af);
 localStorage.setItem("anax", anax);
 localStorage.setItem("tic", tic);
 localStorage.setItem("des", des);
-tic=parseInt(document.getElementById("tic").value);
+tic=parseInt(document.getElementById("tic").value);//τα κανω ιντ για την πραξη της χρεωσης
 des=parseInt(document.getElementById("des").value);
 var xreosi=tic*des;
 localStorage.setItem("xreosi",xreosi);

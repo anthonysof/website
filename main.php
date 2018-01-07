@@ -9,13 +9,13 @@
   <link rel="icon" href="https://cdn.iconscout.com/public/images/icon/free/png-512/aeroplane-airplane-plane-air-transportation-vehicle-pessanger-people-emoj-symbol-3306ff886517b0e9-512x512.png">
 </head>
 <?php
-session_start(); ?>
+session_start();//εξεταζει αν εχει κανει login ?>
 <body>
   <nav class="nav-main">
     <div class="logo"><a href="https://localhost/maria/main.php">Maria's Travels</a></div>
     <ul>
       <li>
-          <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
+          <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a> <!-- καλει μια κενη συναρτηση για το dropdown το # αλλαζει λινκ δεν βολευει -->
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
@@ -48,7 +48,7 @@ session_start(); ?>
 <div class="logomain">
   Maria's Travels
 </div>
-<!-- Slideshow container -->
+<!-- Slideshow -->
 <div class="slideshow-container">
   <div class="mySlides fade">
     <div class="numbertext">1 / 10</div>
@@ -120,14 +120,14 @@ showSlides();
 
 function showSlides() {
     var i;
-    var slides = document.getElementsByClassName("mySlides");
+    var slides = document.getElementsByClassName("mySlides"); //το παιρνει με την κλαση οχι με id σαν πινακας ολα τα στοιχεια
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        slides[i].style.display = "none";//σιγουρευουμε οτι εχουν γυρισει στο none
     }
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 4000); // Change image every 2 seconds
+    slides[slideIndex-1].style.display = "block";//φαινονται ενα ενα
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 </script>
 

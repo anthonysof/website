@@ -49,7 +49,7 @@ session_start(); ?>
   <div class="logomain">
     Maria's Travels
   </div>
-<H2>ΕΙΣΑΙ ΣΙΓΟΥΡΟΣ;</H2>
+<H2>ΕΙΣΤΕ ΣΙΓΟΥΡΟΣ;</H2>
 
 <table class="bordepik" cellpadding="5" cellspacing="5">
 <tr> <td>  ΟΝΟΜΑΤΕΠΩΝΥΜΟ* </td>
