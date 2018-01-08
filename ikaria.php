@@ -12,34 +12,34 @@
 session_start(); ?>
 <body>
   <nav class="nav-main">
-    <div class="logo"><a href="https://localhost/maria/main.php">Maria's Travels</a></div>
+    <div class="logo"><a href="main.php">Maria's Travels</a></div>
     <ul>
       <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
-                <li><a href="https://localhost/maria/newyork.php">Νεα Υόρκη</a></li>
+                <li><a href="ikaria.php">Ικαρία</a></li>
+                <li><a href="newyork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>
       </li>
       <li>
-          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
+          <a href="kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
       </li>
       <li>
-          <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
+          <a href="epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
       </li>
       <li>
-          <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
+          <a href="where.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <?php if(isset($_SESSION['login_user'])){
-        echo '<li><a href="https://localhost/maria/search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
+        echo '<li><a href="search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
         ?>
       <li>
-        <?php if(!isset($_SESSION['login_user'])){echo '<a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
-          else{echo '<a href="https://localhost/maria/logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
+        <?php if(!isset($_SESSION['login_user'])){echo '<a href="login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
+          else{echo '<a href="logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
       </li>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
@@ -54,7 +54,7 @@ session_start(); ?>
 <iframe style="float:left; margin-left:10px;"width="560" height="315" src="https://www.youtube.com/embed/3PsPaLgoL88?rel=0&amp;start=3" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
 <p style="text-align:center; margin-left:10px; margin-right:10px; margin-top:100px;"> Σας καλωσορίζουμε στην Ικαρία, ένα διαφορετικό ελληνικό νησί στο Αιγαίο,με αξέχαστες <a  class="aa"href= "#paralies"> παραλίες</a>.
                          <br>Εδώ, θα βρείτε πληροφορίες για αξέχαστες διακοπές.
-                         <br>Η Ικαρία σας περιμένει για ένα μοναδικό <a class="aa" href="https://localhost/maria/kratisi.php">ταξίδι</a> στη ζωή και το χρόνο.</p>
+                         <br>Η Ικαρία σας περιμένει για ένα μοναδικό <a class="aa" href="kratisi.php">ταξίδι</a> στη ζωή και το χρόνο.</p>
 <div style="float:center;margin-top:280px;">
   <h2 id="paralies" style="font-size:40px;"> Παραλιες</h2>
   <ul style="list-style-type:none;">
@@ -95,7 +95,7 @@ session_start(); ?>
 </table>
 <br> <br>
 <p> Με μονο 100€ το ατομο ταξιδεψτε απο και προς την ικαρια για να επισκευθειτε το ξεχωριστο αυτο νησι. Θα σας μεινει σιγουρα αξεχαστο.
-   <a class="aa" href="https://localhost/maria/kratisi.php">Κλεισε εισητηρια εδω </a></p>
+   <a class="aa" href="kratisi.php">Κλεισε εισητηρια εδω </a></p>
 <p> Για να κλεισετε οικονομικα ξενοδοχεια:</p>
 <iframe src="https://www.trivago.gr/?iSemThemeId=1356&iPathId=447597&sem_keyword=%CE%BE%CE%B5%CE%BD%CE%BF%CE%B4%CE%BF%CF%87%CE%B5%CE%B9%CE%B1%20%CE%B9%CE%BA%CE%B1%CF%81%CE%B9%CE%B1&sem_creativeid=199077553619&sem_matchtype=e&sem_network=g&sem_device=c&sem_placement=&sem_target=&sem_adposition=1t2&sem_param1=&sem_param2=&sem_campaignid=181654025&sem_adgroupid=14242661105&sem_targetid=kwd-39381107600&sem_location=9061582&cip=30124010101&gclid=CjwKCAiAhMLSBRBJEiwAlFrsTnSLZyiuw4t4TM6qpE33yUbEKxhUNVJN8HxqkeOpvwuhMZeLaFqiAxoCJ4kQAvD_BwE" name="iframe_a" width="500" height="500" >
  <p>Ο φυλλομετρητής σας δεν υποστηρίζει πλαίσια</p>

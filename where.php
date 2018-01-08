@@ -14,34 +14,34 @@
 session_start(); ?>
 <body>
   <nav class="nav-main">
-    <div class="logo"><a href="https://localhost/maria/main.php">Maria's Travels</a></div>
+    <div class="logo"><a href="main.php">Maria's Travels</a></div>
     <ul>
       <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
-                <li><a href="https://localhost/maria/newyork.php">Νεα Υόρκη</a></li>
+                <li><a href="ikaria.php">Ικαρία</a></li>
+                <li><a href="newyork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>
       </li>
       <li>
-          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
+          <a href="kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
       </li>
       <li>
-          <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
+          <a href="epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
       </li>
       <li>
-          <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
+          <a href="where.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <?php if(isset($_SESSION['login_user'])){
-        echo '<li><a href="https://localhost/maria/search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
+        echo '<li><a href="search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
         ?>
       <li>
-        <?php if(!isset($_SESSION['login_user'])){echo '<a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
-          else{echo '<a href="https://localhost/maria/logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
+        <?php if(!isset($_SESSION['login_user'])){echo '<a href="login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
+          else{echo '<a href="logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
       </li>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>

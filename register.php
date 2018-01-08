@@ -11,34 +11,34 @@
 </head>
 <body>
   <nav class="nav-main">
-    <div class="logo"><a href="https://localhost/maria/main.php">Maria's Travels</a></div>
+    <div class="logo"><a href="main.php">Maria's Travels</a></div>
     <ul>
       <li>
           <a href="javascript:void(0)" class="nav-item">Σας προτείνουμε...</a>
           <div class="nav-content">
             <div class="nav-sub">
               <ul>
-                <li><a href="https://localhost/maria/ikaria.php">Ικαρία</a></li>
-                <li><a href="https://localhost/maria/neywork.php">Νεα Υόρκη</a></li>
+                <li><a href="ikaria.php">Ικαρία</a></li>
+                <li><a href="neywork.php">Νεα Υόρκη</a></li>
               </ul>
             </div>
           </div>
       </li>
       <li>
-          <a href="https://localhost/maria/kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
+          <a href="kratisi.php" class="nav-item">Κλείσιμο εκδρομής</a>
       </li>
       <li>
-          <a href="https://localhost/maria/epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
+          <a href="epikoinonia.php" class="nav-item">Επικοινωνήστε μαζί μας</a>
       </li>
       <li>
-          <a href="https://localhost/maria/where.php" class="nav-item">Πού είμαστε;</a>
+          <a href="where.php" class="nav-item">Πού είμαστε;</a>
       </li>
       <?php if(isset($_SESSION['login_user'])){
-        echo '<li><a href="https://localhost/maria/search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
+        echo '<li><a href="search.php" class="nav-item">Αναζήτηση Εκδρομής</a>'; }
         ?>
       <li>
-        <?php if(!isset($_SESSION['login_user'])){echo '<a href="https://localhost/maria/login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
-          else{echo '<a href="https://localhost/maria/logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
+        <?php if(!isset($_SESSION['login_user'])){echo '<a href="login.php" class="nav-item">Είσοδος/Εγγραφή χρήστη</a>'; }
+          else{echo '<a href="logout.php" class="nav-item">Αποσύνδεση</a>'; } ?>
       </li>
     </ul>
     <?php if(isset($_SESSION['login_user'])) echo '<div class="nav-item"> Καλωσήρθες '.$_SESSION['login_user'].'</div>' ?>
@@ -142,15 +142,15 @@ if (isset($_POST['con'])&&$_POST['con']=="1"&&isset($_POST['email'])&&$_POST['em
     echo "<br>Ήδη εγγεγραμένος χρήστης με αυτό το email: ".$query1;
   }
   elseif((mysqli_num_rows($raw_results2) > 0)&&(mysqli_num_rows($raw_results1)==0)){
-    echo "<br>Το username χρησιμοποιείται ήδη";
+    echo "<br>Το username χρησιμοποιείται ήδη<br><br>";
   }
   elseif((mysqli_num_rows($raw_results2) > 0)&&(mysqli_num_rows($raw_results1)>0)){
-    echo "<br>Είστε ήδη εγγεγραμμένος, ξεχασατε τον κωδικό σας;";
+    echo "<br>Είστε ήδη εγγεγραμμένος, ξεχασατε τον κωδικό σας;<br><br>";
   }
   else{
     $sql = "INSERT INTO users (email,username,password,firstname,surname) VALUES ('".$_POST['email']."','".$_POST['username']."','".$passwordu."','".$_POST['FirstName']."','".$_POST['LastName']."')";
     if (mysqli_query($conn, $sql)) {
-        echo "Επιτυχημένη εγγραφή";
+        echo "Επιτυχημένη εγγραφή<br><br>";
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($conn);
     }
